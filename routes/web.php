@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/portfolio', function () {
     return view('portfolio-details');
 });
+
+
+//CRUD Data
+Route::get('customer', 'CustomerControllerr@index');
+Route::get('customer/create', 'CustomerController@create')->name('customer.create');
+Route::post('customer/store', 'CustomerController@store')->name('customer.store');
+Route::delete('customer/{id}', 'CustomerController@destroy')->name('customer.delete');
+Route::get('customer/edit/{customer}', 'CustomerController@edit')->name('customer.edit'):
+Route::patch('customer/update/{customer}', 'CustomerController@update')->name('customer.update'):
+
+
+
